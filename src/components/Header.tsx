@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Phone } from 'lucide-react';
 import { services } from '../data/services';
 
 interface HeaderProps {
@@ -120,6 +120,14 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
           </nav>
 
           <div className="flex items-center space-x-4">
+            <a
+              href="tel:+919876543210"
+              className="hidden lg:flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-semibold transition-colors"
+            >
+              <Phone className="w-5 h-5" />
+              <span className="text-sm">+91 98765 43210</span>
+            </a>
+
             <button
               onClick={() => onNavigate('contact')}
               className="hidden md:block px-6 py-2.5 bg-gradient-to-r from-blue-600 to-blue-700 text-white text-sm font-semibold rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all shadow-md hover:shadow-lg"
@@ -139,6 +147,14 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
         {isMenuOpen && (
           <div className="lg:hidden py-4 border-t border-gray-100">
             <div className="flex flex-col space-y-4">
+              <a
+                href="tel:+919876543210"
+                className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-semibold"
+              >
+                <Phone className="w-5 h-5" />
+                <span>+91 98765 43210</span>
+              </a>
+
               <button
                 onClick={() => {
                   onNavigate('home');
