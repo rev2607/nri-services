@@ -32,7 +32,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
             onClick={() => onNavigate('home')}
             className="flex items-center space-x-2 group"
           >
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center text-white font-bold text-lg shadow-md group-hover:shadow-lg transition-shadow">
+            <div className="w-10 h-10 bg-gradient-to-br from-orange-600 to-orange-700 rounded-lg flex items-center justify-center text-white font-bold text-lg shadow-md group-hover:shadow-lg transition-shadow">
               NR
             </div>
             <div className="hidden sm:block">
@@ -46,8 +46,8 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
               onClick={() => onNavigate('home')}
               className={`text-sm font-medium transition-colors ${
                 currentPage === 'home'
-                  ? 'text-blue-600'
-                  : 'text-gray-700 hover:text-blue-600'
+                  ? 'text-orange-600'
+                  : 'text-gray-700 hover:text-orange-600'
               }`}
             >
               Home
@@ -57,7 +57,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
               <button
                 onMouseEnter={() => setIsServicesOpen(true)}
                 onMouseLeave={() => setIsServicesOpen(false)}
-                className="flex items-center space-x-1 text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors"
+                className="flex items-center space-x-1 text-sm font-medium text-gray-700 hover:text-orange-600 transition-colors"
               >
                 <span>Services</span>
                 <ChevronDown className="w-4 h-4" />
@@ -76,7 +76,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
                         onNavigate(`service-${service.slug}`);
                         setIsServicesOpen(false);
                       }}
-                      className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                      className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors"
                     >
                       {service.title}
                     </button>
@@ -89,8 +89,8 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
               onClick={() => onNavigate('about')}
               className={`text-sm font-medium transition-colors ${
                 currentPage === 'about'
-                  ? 'text-blue-600'
-                  : 'text-gray-700 hover:text-blue-600'
+                  ? 'text-orange-600'
+                  : 'text-gray-700 hover:text-orange-600'
               }`}
             >
               About Us
@@ -100,8 +100,8 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
               onClick={() => onNavigate('testimonials')}
               className={`text-sm font-medium transition-colors ${
                 currentPage === 'testimonials'
-                  ? 'text-blue-600'
-                  : 'text-gray-700 hover:text-blue-600'
+                  ? 'text-orange-600'
+                  : 'text-gray-700 hover:text-orange-600'
               }`}
             >
               Testimonials
@@ -111,8 +111,8 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
               onClick={() => onNavigate('contact')}
               className={`text-sm font-medium transition-colors ${
                 currentPage === 'contact'
-                  ? 'text-blue-600'
-                  : 'text-gray-700 hover:text-blue-600'
+                  ? 'text-orange-600'
+                  : 'text-gray-700 hover:text-orange-600'
               }`}
             >
               Contact
@@ -122,7 +122,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
           <div className="flex items-center space-x-4">
             <a
               href="tel:+919876543210"
-              className="hidden lg:flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-semibold transition-colors"
+              className="hidden lg:flex items-center space-x-2 text-orange-600 hover:text-orange-700 font-semibold transition-colors"
             >
               <Phone className="w-5 h-5" />
               <span className="text-sm">+91 98765 43210</span>
@@ -130,14 +130,14 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
 
             <button
               onClick={() => onNavigate('contact')}
-              className="hidden md:block px-6 py-2.5 bg-gradient-to-r from-blue-600 to-blue-700 text-white text-sm font-semibold rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all shadow-md hover:shadow-lg"
+              className="hidden md:block px-6 py-2.5 bg-gradient-to-r from-orange-600 to-orange-700 text-white text-sm font-semibold rounded-lg hover:from-orange-700 hover:to-orange-800 transition-all shadow-md hover:shadow-lg"
             >
               Book a Consultation
             </button>
 
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
+              className="lg:hidden p-2 text-gray-700 hover:text-orange-600 transition-colors"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -149,7 +149,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
             <div className="flex flex-col space-y-4">
               <a
                 href="tel:+919876543210"
-                className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-semibold"
+                className="flex items-center space-x-2 text-orange-600 hover:text-orange-700 font-semibold"
               >
                 <Phone className="w-5 h-5" />
                 <span>+91 98765 43210</span>
@@ -160,7 +160,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
                   onNavigate('home');
                   setIsMenuOpen(false);
                 }}
-                className="text-left text-gray-700 hover:text-blue-600 font-medium"
+                className="text-left text-gray-700 hover:text-orange-600 font-medium"
               >
                 Home
               </button>
@@ -175,7 +175,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
                         onNavigate(`service-${service.slug}`);
                         setIsMenuOpen(false);
                       }}
-                      className="block text-left text-sm text-gray-600 hover:text-blue-600"
+                      className="block text-left text-sm text-gray-600 hover:text-orange-600"
                     >
                       {service.title}
                     </button>
@@ -188,7 +188,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
                   onNavigate('about');
                   setIsMenuOpen(false);
                 }}
-                className="text-left text-gray-700 hover:text-blue-600 font-medium"
+                className="text-left text-gray-700 hover:text-orange-600 font-medium"
               >
                 About Us
               </button>
@@ -198,7 +198,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
                   onNavigate('testimonials');
                   setIsMenuOpen(false);
                 }}
-                className="text-left text-gray-700 hover:text-blue-600 font-medium"
+                className="text-left text-gray-700 hover:text-orange-600 font-medium"
               >
                 Testimonials
               </button>
@@ -208,7 +208,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
                   onNavigate('contact');
                   setIsMenuOpen(false);
                 }}
-                className="text-left text-gray-700 hover:text-blue-600 font-medium"
+                className="text-left text-gray-700 hover:text-orange-600 font-medium"
               >
                 Contact
               </button>
@@ -218,7 +218,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
                   onNavigate('contact');
                   setIsMenuOpen(false);
                 }}
-                className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-blue-700 text-white text-sm font-semibold rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all shadow-md text-center"
+                className="px-6 py-2.5 bg-gradient-to-r from-orange-600 to-orange-700 text-white text-sm font-semibold rounded-lg hover:from-orange-700 hover:to-orange-800 transition-all shadow-md text-center"
               >
                 Book a Consultation
               </button>

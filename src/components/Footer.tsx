@@ -11,7 +11,7 @@ export default function Footer({ onNavigate }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+              <div className="w-10 h-10 bg-gradient-to-br from-orange-600 to-orange-700 rounded-lg flex items-center justify-center text-white font-bold text-lg">
                 NR
               </div>
               <div>
@@ -30,7 +30,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => onNavigate('about')}
-                  className="text-sm hover:text-blue-400 transition-colors"
+                  className="text-sm hover:text-orange-400 transition-colors"
                 >
                   About Us
                 </button>
@@ -38,7 +38,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => onNavigate('home')}
-                  className="text-sm hover:text-blue-400 transition-colors"
+                  className="text-sm hover:text-orange-400 transition-colors"
                 >
                   Services
                 </button>
@@ -46,7 +46,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => onNavigate('testimonials')}
-                  className="text-sm hover:text-blue-400 transition-colors"
+                  className="text-sm hover:text-orange-400 transition-colors"
                 >
                   Testimonials
                 </button>
@@ -54,7 +54,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => onNavigate('contact')}
-                  className="text-sm hover:text-blue-400 transition-colors"
+                  className="text-sm hover:text-orange-400 transition-colors"
                 >
                   Contact
                 </button>
@@ -91,7 +91,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                   href="https://wa.me/919876543210"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-2 text-sm hover:text-blue-400 transition-colors"
+                  className="flex items-center space-x-2 text-sm hover:text-orange-400 transition-colors"
                 >
                   <MessageCircle className="w-4 h-4" />
                   <span>+91 98765 43210</span>
@@ -100,7 +100,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               <li>
                 <a
                   href="mailto:support@nriservices.com"
-                  className="flex items-center space-x-2 text-sm hover:text-blue-400 transition-colors"
+                  className="flex items-center space-x-2 text-sm hover:text-orange-400 transition-colors"
                 >
                   <Mail className="w-4 h-4" />
                   <span>support@nriservices.com</span>
@@ -109,7 +109,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               <li>
                 <a
                   href="tel:+919876543210"
-                  className="flex items-center space-x-2 text-sm hover:text-blue-400 transition-colors"
+                  className="flex items-center space-x-2 text-sm hover:text-orange-400 transition-colors"
                 >
                   <Phone className="w-4 h-4" />
                   <span>+91 98765 43210</span>
@@ -122,7 +122,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors"
+                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors"
               >
                 <Linkedin className="w-5 h-5" />
               </a>

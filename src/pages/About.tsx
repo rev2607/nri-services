@@ -7,10 +7,10 @@ interface AboutProps {
 export default function About({ onNavigate }: AboutProps) {
   return (
     <div className="min-h-screen pt-20">
-      <section className="bg-gradient-to-br from-blue-600 to-blue-700 text-white py-20">
+      <section className="bg-gradient-to-br from-orange-600 to-orange-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">About Us</h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+          <p className="text-xl text-orange-100 max-w-3xl mx-auto">
             Bridging distances, building trust, and bringing India closer to NRIs worldwide
           </p>
         </div>
@@ -48,8 +48,8 @@ export default function About({ onNavigate }: AboutProps) {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl p-8 shadow-md">
-              <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <Target className="w-7 h-7 text-blue-600" />
+              <div className="w-14 h-14 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                <Target className="w-7 h-7 text-orange-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Our Mission</h3>
               <p className="text-gray-700">
@@ -59,8 +59,8 @@ export default function About({ onNavigate }: AboutProps) {
             </div>
 
             <div className="bg-white rounded-xl p-8 shadow-md">
-              <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <Shield className="w-7 h-7 text-blue-600" />
+              <div className="w-14 h-14 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                <Shield className="w-7 h-7 text-orange-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Trust & Integrity</h3>
               <p className="text-gray-700">
@@ -70,8 +70,8 @@ export default function About({ onNavigate }: AboutProps) {
             </div>
 
             <div className="bg-white rounded-xl p-8 shadow-md">
-              <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <Heart className="w-7 h-7 text-blue-600" />
+              <div className="w-14 h-14 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                <Heart className="w-7 h-7 text-orange-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Compassion</h3>
               <p className="text-gray-700">
@@ -81,8 +81,8 @@ export default function About({ onNavigate }: AboutProps) {
             </div>
 
             <div className="bg-white rounded-xl p-8 shadow-md">
-              <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <Globe className="w-7 h-7 text-blue-600" />
+              <div className="w-14 h-14 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                <Globe className="w-7 h-7 text-orange-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Global Standards</h3>
               <p className="text-gray-700">
@@ -92,8 +92,8 @@ export default function About({ onNavigate }: AboutProps) {
             </div>
 
             <div className="bg-white rounded-xl p-8 shadow-md">
-              <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <Users className="w-7 h-7 text-blue-600" />
+              <div className="w-14 h-14 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                <Users className="w-7 h-7 text-orange-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Customer First</h3>
               <p className="text-gray-700">
@@ -103,8 +103,8 @@ export default function About({ onNavigate }: AboutProps) {
             </div>
 
             <div className="bg-white rounded-xl p-8 shadow-md">
-              <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <Award className="w-7 h-7 text-blue-600" />
+              <div className="w-14 h-14 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                <Award className="w-7 h-7 text-orange-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Excellence</h3>
               <p className="text-gray-700">
@@ -123,29 +123,29 @@ export default function About({ onNavigate }: AboutProps) {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">10,000+</div>
+              <div className="text-4xl font-bold text-orange-600 mb-2">10,000+</div>
               <div className="text-gray-700 font-medium">Happy Clients</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">50+</div>
+              <div className="text-4xl font-bold text-orange-600 mb-2">50+</div>
               <div className="text-gray-700 font-medium">Countries Served</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">9+ Years</div>
+              <div className="text-4xl font-bold text-orange-600 mb-2">9+ Years</div>
               <div className="text-gray-700 font-medium">Industry Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">24/7</div>
+              <div className="text-4xl font-bold text-orange-600 mb-2">24/7</div>
               <div className="text-gray-700 font-medium">Customer Support</div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-gradient-to-br from-blue-600 to-blue-700 text-white">
+      <section className="py-16 bg-gradient-to-br from-orange-600 to-orange-700 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold mb-6 text-center">Our Commitment to You</h2>
-          <div className="space-y-4 text-lg text-blue-50">
+          <div className="space-y-4 text-lg text-orange-50">
             <div className="flex items-start space-x-3">
               <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                 <div className="w-2 h-2 bg-white rounded-full" />
@@ -196,7 +196,7 @@ export default function About({ onNavigate }: AboutProps) {
           </p>
           <button
             onClick={() => onNavigate('contact')}
-            className="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white text-lg font-semibold rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all shadow-lg hover:shadow-xl"
+            className="px-8 py-4 bg-gradient-to-r from-orange-600 to-orange-700 text-white text-lg font-semibold rounded-lg hover:from-orange-700 hover:to-orange-800 transition-all shadow-lg hover:shadow-xl"
           >
             Get Started Today
           </button>
