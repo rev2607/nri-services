@@ -11,6 +11,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [servicesTimeout, setServicesTimeout] = useState<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +20,29 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    return () => {
+      if (servicesTimeout) {
+        clearTimeout(servicesTimeout);
+      }
+    };
+  }, [servicesTimeout]);
+
+  const handleServicesMouseEnter = () => {
+    if (servicesTimeout) {
+      clearTimeout(servicesTimeout);
+      setServicesTimeout(null);
+    }
+    setIsServicesOpen(true);
+  };
+
+  const handleServicesMouseLeave = () => {
+    const timeout = setTimeout(() => {
+      setIsServicesOpen(false);
+    }, 150); // Small delay to allow moving to dropdown
+    setServicesTimeout(timeout);
+  };
 
   return (
     <header
@@ -55,8 +79,8 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
 
             <div className="relative">
               <button
-                onMouseEnter={() => setIsServicesOpen(true)}
-                onMouseLeave={() => setIsServicesOpen(false)}
+                onMouseEnter={handleServicesMouseEnter}
+                onMouseLeave={handleServicesMouseLeave}
                 className="flex items-center space-x-1 text-sm font-medium text-navy-700 hover:text-coral-700 transition-colors"
               >
                 <span>Services</span>
@@ -65,8 +89,8 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
 
               {isServicesOpen && (
                 <div
-                  onMouseEnter={() => setIsServicesOpen(true)}
-                  onMouseLeave={() => setIsServicesOpen(false)}
+                  onMouseEnter={handleServicesMouseEnter}
+                  onMouseLeave={handleServicesMouseLeave}
                   className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2 border border-gray-200"
                 >
                   {services.map((service) => (
