@@ -1,3 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    /* Custom color variables for the new theme */
+    --color-navy: #0f172a;
+    --color-coral: #e83e2f;
+    --color-warm: #f97316;
+    --color-warm-light: #fb923c;
+    
+    /* Gradient combinations */
+    --gradient-primary: linear-gradient(135deg, var(--color-coral), var(--color-warm));
+    --gradient-secondary: linear-gradient(135deg, var(--color-warm), var(--color-warm-light));
+    --gradient-accent: linear-gradient(135deg, var(--color-navy), var(--color-coral));
+  }
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-coral-700 to-warm-500 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:from-coral-800 hover:to-warm-600;
+  }
+  
+  .btn-secondary {
+    @apply bg-gradient-to-r from-warm-500 to-warm-400 text-navy-950 font-semibold px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:from-warm-600 hover:to-warm-500;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-coral-700 to-warm-500 bg-clip-text text-transparent;
+  }
+  
+  .bg-gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .bg-gradient-secondary {
+    background: var(--gradient-secondary);
+  }
+  
+  .bg-gradient-accent {
+    background: var(--gradient-accent);
+  }
+}

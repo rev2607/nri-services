@@ -21,7 +21,7 @@ export default function HomePage({ onNavigate }: HomeProps) {
 
   return (
     <div className="min-h-screen">
-      <section className="relative bg-gradient-to-br from-orange-600 via-orange-700 to-orange-800 pt-20">
+      <section className="relative bg-gradient-to-br from-coral-700 via-warm-500 to-warm-400 pt-20">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-40"></div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
@@ -31,14 +31,14 @@ export default function HomePage({ onNavigate }: HomeProps) {
             </h1>
 
             <div className="mb-8">
-              <div className="bg-white rounded-xl shadow-2xl p-2 flex items-center">
+              <div className="bg-warm-50 rounded-xl shadow-2xl p-2 flex items-center">
                 <Search className="w-6 h-6 text-gray-400 ml-3" />
                 <input
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder='Search for "Property Management" or any service...'
-                  className="flex-1 px-4 py-3 text-gray-900 placeholder-gray-500 focus:outline-none text-lg"
+                  className="flex-1 px-4 py-3 text-navy-950 placeholder-gray-500 focus:outline-none text-lg"
                 />
                 <button className="p-3 hover:bg-gray-100 rounded-lg transition-colors">
                   <Mic className="w-6 h-6 text-gray-400" />
@@ -53,14 +53,14 @@ export default function HomePage({ onNavigate }: HomeProps) {
                   <button
                     key={service.id}
                     onClick={() => onNavigate(`service-${service.slug}`)}
-                    className="group bg-white hover:bg-orange-50 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 text-left"
+                    className="group bg-warm-50 hover:bg-orange-50 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 text-left"
                   >
                     <div className="flex items-center space-x-3 mb-2">
-                      <div className="w-10 h-10 bg-gradient-to-br from-orange-600 to-orange-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <div className="w-10 h-10 bg-gradient-to-br from-coral-700 to-warm-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                         <Icon className="w-5 h-5 text-white" />
                       </div>
                     </div>
-                    <div className="text-sm font-bold text-gray-900 group-hover:text-orange-600 transition-colors">
+                    <div className="text-sm font-bold text-navy-950 group-hover:text-coral-700 transition-colors">
                       {service.title}
                     </div>
                   </button>
@@ -85,7 +85,7 @@ export default function HomePage({ onNavigate }: HomeProps) {
             <div className="flex-1 mb-6 md:mb-0">
               <div className="flex items-center space-x-2 mb-3">
                 <Sparkles className="w-8 h-8 text-white" />
-                <span className="inline-block px-4 py-1 bg-white/20 text-white rounded-full text-sm font-bold">
+                <span className="inline-block px-4 py-1 bg-warm-50/20 text-white rounded-full text-sm font-bold">
                   LIMITED TIME OFFER
                 </span>
               </div>
@@ -99,7 +99,7 @@ export default function HomePage({ onNavigate }: HomeProps) {
             <div>
               <button
                 onClick={() => onNavigate('contact')}
-                className="px-8 py-4 bg-white text-yellow-600 text-lg font-bold rounded-xl hover:bg-yellow-50 transition-all shadow-xl hover:shadow-2xl transform hover:scale-105"
+                className="px-8 py-4 bg-warm-50 text-yellow-600 text-lg font-bold rounded-xl hover:bg-yellow-50 transition-all shadow-xl hover:shadow-2xl transform hover:scale-105"
               >
                 Claim Your Free Session
               </button>
@@ -108,13 +108,13 @@ export default function HomePage({ onNavigate }: HomeProps) {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-warm-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold text-navy-950 mb-4">
               Why 10,000+ NRIs Trust Us
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-navy-600 max-w-2xl mx-auto">
               We understand the unique challenges of managing affairs from abroad
             </p>
           </div>
@@ -129,11 +129,11 @@ export default function HomePage({ onNavigate }: HomeProps) {
               const Icon = benefit.icon;
               return (
                 <div key={index} className="bg-gradient-to-br from-orange-50 to-white rounded-xl p-8 border-2 border-orange-100 hover:border-orange-600 hover:shadow-xl transition-all">
-                  <div className="w-14 h-14 bg-gradient-to-br from-orange-600 to-orange-700 rounded-xl flex items-center justify-center mb-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-coral-700 to-warm-500 rounded-xl flex items-center justify-center mb-4">
                     <Icon className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{benefit.title}</h3>
-                  <p className="text-gray-600">{benefit.desc}</p>
+                  <h3 className="text-xl font-bold text-navy-950 mb-2">{benefit.title}</h3>
+                  <p className="text-navy-600">{benefit.desc}</p>
                 </div>
               );
             })}
@@ -144,10 +144,10 @@ export default function HomePage({ onNavigate }: HomeProps) {
       <section className="py-20 bg-gradient-to-br from-gray-50 to-orange-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold text-navy-950 mb-4">
               What Our Clients Say
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-navy-600 max-w-2xl mx-auto">
               Real experiences from NRIs around the world
             </p>
           </div>
@@ -156,7 +156,7 @@ export default function HomePage({ onNavigate }: HomeProps) {
             {testimonials.slice(0, 3).map((testimonial) => (
               <div
                 key={testimonial.id}
-                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all border-2 border-transparent hover:border-orange-600"
+                className="bg-warm-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all border-2 border-transparent hover:border-orange-600"
               >
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -171,7 +171,7 @@ export default function HomePage({ onNavigate }: HomeProps) {
                 </div>
                 <p className="text-gray-700 mb-6 leading-relaxed">"{testimonial.text}"</p>
                 <div>
-                  <div className="font-bold text-gray-900 text-lg">{testimonial.name}</div>
+                  <div className="font-bold text-navy-950 text-lg">{testimonial.name}</div>
                   <div className="text-sm text-gray-500">{testimonial.location}</div>
                   <div className="inline-block mt-2 px-3 py-1 bg-orange-100 text-orange-700 text-xs font-bold rounded-full">
                     {testimonial.service}
@@ -184,7 +184,7 @@ export default function HomePage({ onNavigate }: HomeProps) {
           <div className="text-center mt-12">
             <button
               onClick={() => onNavigate('testimonials')}
-              className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-orange-600 border-2 border-orange-600 font-bold rounded-xl hover:bg-orange-600 hover:text-white transition-all shadow-lg text-lg"
+              className="inline-flex items-center space-x-2 px-8 py-4 bg-warm-50 text-coral-700 border-2 border-orange-600 font-bold rounded-xl hover:bg-coral-700 hover:text-white transition-all shadow-lg text-lg"
             >
               <span>View All Testimonials</span>
               <ArrowRight className="w-5 h-5" />
@@ -220,15 +220,15 @@ export default function HomePage({ onNavigate }: HomeProps) {
 
       <section className="py-20 bg-gradient-to-br from-orange-50 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold text-navy-950 mb-6">
             Ready to Get Started?
           </h2>
-          <p className="text-xl text-gray-600 mb-10">
+          <p className="text-xl text-navy-600 mb-10">
             Book a free consultation with our experts today
           </p>
           <button
             onClick={() => onNavigate('contact')}
-            className="inline-flex items-center space-x-2 px-10 py-5 bg-gradient-to-r from-orange-600 to-orange-700 text-white text-xl font-bold rounded-xl hover:from-orange-700 hover:to-orange-800 transition-all shadow-2xl hover:shadow-3xl transform hover:-translate-y-1"
+            className="inline-flex items-center space-x-2 px-10 py-5 bg-gradient-to-r from-coral-700 to-warm-500 text-white text-xl font-bold rounded-xl hover:from-coral-800 hover:to-warm-600 transition-all shadow-2xl hover:shadow-3xl transform hover:-translate-y-1"
           >
             <span>Book Free Consultation</span>
             <ArrowRight className="w-6 h-6" />
