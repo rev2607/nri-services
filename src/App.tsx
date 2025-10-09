@@ -45,7 +45,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-navy-50 to-warm-50">
+    <div className="min-h-screen bg-white">
       <Header currentPage={currentPage} onNavigate={handleNavigate} />
       <main>{renderPage()}</main>
       <Footer onNavigate={handleNavigate} />

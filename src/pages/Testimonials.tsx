@@ -8,10 +8,10 @@ interface TestimonialsProps {
 export default function Testimonials({ onNavigate }: TestimonialsProps) {
   return (
     <div className="min-h-screen pt-20">
-      <section className="bg-gradient-to-br from-brand to-brand-700 text-white py-20">
+      <section className="bg-gradient-to-br from-orange-600 to-orange-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Client Testimonials</h1>
-          <p className="text-xl text-brand-100 max-w-3xl mx-auto">
+          <p className="text-xl text-orange-100 max-w-3xl mx-auto">
             Real stories from NRIs who trust us with their most important needs
           </p>
         </div>
@@ -23,7 +23,7 @@ export default function Testimonials({ onNavigate }: TestimonialsProps) {
             {testimonials.map((testimonial) => (
               <div
                 key={testimonial.id}
-                className="bg-white rounded-xl border-2 border-gray-100 p-8 hover:border-brand hover:shadow-xl transition-all duration-300"
+                className="bg-white rounded-xl border-2 border-gray-100 p-8 hover:border-orange-600 hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center">
@@ -37,7 +37,7 @@ export default function Testimonials({ onNavigate }: TestimonialsProps) {
                       </svg>
                     ))}
                   </div>
-                  <Quote className="w-8 h-8 text-brand-100" />
+                  <Quote className="w-8 h-8 text-orange-100" />
                 </div>
 
                 <p className="text-gray-700 mb-6 leading-relaxed">
@@ -47,7 +47,7 @@ export default function Testimonials({ onNavigate }: TestimonialsProps) {
                 <div className="pt-4 border-t border-gray-100">
                   <div className="font-bold text-gray-900 mb-1">{testimonial.name}</div>
                   <div className="text-sm text-gray-600 mb-1">{testimonial.location}</div>
-                  <div className="inline-block px-3 py-1 bg-brand-50 text-brand text-xs font-semibold rounded-full">
+                  <div className="inline-block px-3 py-1 bg-orange-50 text-orange-600 text-xs font-semibold rounded-full">
                     {testimonial.service}
                   </div>
                 </div>
@@ -62,15 +62,15 @@ export default function Testimonials({ onNavigate }: TestimonialsProps) {
           <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
-                <div className="text-4xl font-bold text-brand mb-2">98%</div>
+                <div className="text-4xl font-bold text-orange-600 mb-2">98%</div>
                 <div className="text-gray-700 font-medium">Satisfaction Rate</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-brand mb-2">4.9/5</div>
+                <div className="text-4xl font-bold text-orange-600 mb-2">4.9/5</div>
                 <div className="text-gray-700 font-medium">Average Rating</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-brand mb-2">10,000+</div>
+                <div className="text-4xl font-bold text-orange-600 mb-2">10,000+</div>
                 <div className="text-gray-700 font-medium">Happy Clients</div>
               </div>
             </div>
@@ -88,7 +88,7 @@ export default function Testimonials({ onNavigate }: TestimonialsProps) {
           </p>
           <button
             onClick={() => onNavigate('contact')}
-            className="px-8 py-4 bg-gradient-to-r from-brand to-brand-700 text-white text-lg font-semibold rounded-lg hover:from-brand-700 hover:to-brand-800 transition-all shadow-lg hover:shadow-xl"
+            className="px-8 py-4 bg-gradient-to-r from-orange-600 to-orange-700 text-white text-lg font-semibold rounded-lg hover:from-orange-700 hover:to-orange-800 transition-all shadow-lg hover:shadow-xl"
           >
             Contact Us
           </button>
@@ -115,9 +115,9 @@ export default function Testimonials({ onNavigate }: TestimonialsProps) {
               return (
                 <div
                   key={service}
-                  className="bg-white rounded-lg p-4 text-center border border-gray-200 hover:border-brand hover:shadow-md transition-all"
+                  className="bg-white rounded-lg p-4 text-center border border-gray-200 hover:border-orange-600 hover:shadow-md transition-all"
                 >
-                  <div className="text-2xl font-bold text-brand mb-1">{count}</div>
+                  <div className="text-2xl font-bold text-orange-600 mb-1">{count}</div>
                   <div className="text-sm text-gray-700">{service}</div>
                 </div>
               );
