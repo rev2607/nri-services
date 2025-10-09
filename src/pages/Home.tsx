@@ -53,7 +53,7 @@ export default function HomePage({ onNavigate }: HomeProps) {
                   <button
                     key={service.id}
                     onClick={() => onNavigate(`service-${service.slug}`)}
-                    className="group bg-warm-50 hover:bg-orange-50 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 text-left"
+                    className="group bg-warm-50 hover:bg-brand-50 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 text-left"
                   >
                     <div className="flex items-center space-x-3 mb-2">
                       <div className="w-10 h-10 bg-gradient-to-br from-coral-700 to-warm-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -128,7 +128,7 @@ export default function HomePage({ onNavigate }: HomeProps) {
             ].map((benefit, index) => {
               const Icon = benefit.icon;
               return (
-                <div key={index} className="bg-gradient-to-br from-orange-50 to-white rounded-xl p-8 border-2 border-orange-100 hover:border-orange-600 hover:shadow-xl transition-all">
+                <div key={index} className="bg-gradient-to-br from-brand-50 to-white rounded-xl p-8 border-2 border-brand-100 hover:border-brand-600 hover:shadow-xl transition-all">
                   <div className="w-14 h-14 bg-gradient-to-br from-coral-700 to-warm-500 rounded-xl flex items-center justify-center mb-4">
                     <Icon className="w-7 h-7 text-white" />
                   </div>
@@ -141,7 +141,7 @@ export default function HomePage({ onNavigate }: HomeProps) {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-orange-50">
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-brand-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-navy-950 mb-4">
@@ -156,7 +156,7 @@ export default function HomePage({ onNavigate }: HomeProps) {
             {testimonials.slice(0, 3).map((testimonial) => (
               <div
                 key={testimonial.id}
-                className="bg-warm-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all border-2 border-transparent hover:border-orange-600"
+                className="bg-warm-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all border-2 border-transparent hover:border-brand-600"
               >
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -173,7 +173,7 @@ export default function HomePage({ onNavigate }: HomeProps) {
                 <div>
                   <div className="font-bold text-navy-950 text-lg">{testimonial.name}</div>
                   <div className="text-sm text-gray-500">{testimonial.location}</div>
-                  <div className="inline-block mt-2 px-3 py-1 bg-orange-100 text-orange-700 text-xs font-bold rounded-full">
+                  <div className="inline-block mt-2 px-3 py-1 bg-brand-100 text-brand-700 text-xs font-bold rounded-full">
                     {testimonial.service}
                   </div>
                 </div>
@@ -184,7 +184,7 @@ export default function HomePage({ onNavigate }: HomeProps) {
           <div className="text-center mt-12">
             <button
               onClick={() => onNavigate('testimonials')}
-              className="inline-flex items-center space-x-2 px-8 py-4 bg-warm-50 text-coral-700 border-2 border-orange-600 font-bold rounded-xl hover:bg-coral-700 hover:text-white transition-all shadow-lg text-lg"
+              className="inline-flex items-center space-x-2 px-8 py-4 bg-warm-50 text-coral-700 border-2 border-brand-600 font-bold rounded-xl hover:bg-coral-700 hover:text-white transition-all shadow-lg text-lg"
             >
               <span>View All Testimonials</span>
               <ArrowRight className="w-5 h-5" />
@@ -193,32 +193,32 @@ export default function HomePage({ onNavigate }: HomeProps) {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-orange-600 via-orange-700 to-orange-800 text-white">
+      <section className="py-20 bg-gradient-to-br from-brand via-brand-700 to-brand-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
             <div>
               <div className="text-5xl md:text-6xl font-bold mb-3 bg-gradient-to-r from-yellow-400 to-yellow-200 bg-clip-text text-transparent">
                 10,000+
               </div>
-              <div className="text-xl text-orange-100 font-semibold">Happy Clients Worldwide</div>
+              <div className="text-xl text-brand-100 font-semibold">Happy Clients Worldwide</div>
             </div>
             <div>
               <div className="text-5xl md:text-6xl font-bold mb-3 bg-gradient-to-r from-yellow-400 to-yellow-200 bg-clip-text text-transparent">
                 50+
               </div>
-              <div className="text-xl text-orange-100 font-semibold">Countries Served</div>
+              <div className="text-xl text-brand-100 font-semibold">Countries Served</div>
             </div>
             <div>
               <div className="text-5xl md:text-6xl font-bold mb-3 bg-gradient-to-r from-yellow-400 to-yellow-200 bg-clip-text text-transparent">
                 98%
               </div>
-              <div className="text-xl text-orange-100 font-semibold">Client Satisfaction Rate</div>
+              <div className="text-xl text-brand-100 font-semibold">Client Satisfaction Rate</div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-orange-50 to-white">
+      <section className="py-20 bg-gradient-to-br from-brand-50 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-5xl font-bold text-navy-950 mb-6">
             Ready to Get Started?

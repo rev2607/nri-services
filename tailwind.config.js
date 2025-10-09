@@ -4,60 +4,58 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Custom color palette based on the provided theme
-        navy: {
-          50: '#f0f4f8',
-          100: '#d9e2ec',
-          200: '#bcccdc',
-          300: '#9fb3c8',
-          400: '#829ab1',
-          500: '#627d98',
-          600: '#486581',
-          700: '#334e68',
-          800: '#243b53',
-          900: '#102a43',
-          950: '#0f172a', // Dark navy blue
+        brand: {
+          50: '#fff5ef',
+          100: '#ffe9dd',
+          200: '#ffd0b8',
+          300: '#ffb490',
+          400: '#ff944f',
+          500: '#ff6a00',
+          600: '#ff6200',
+          700: '#e05500',
+          800: '#b24400',
+          900: '#7a2b00',
+          DEFAULT: '#ff6a00',
         },
-        coral: {
-          50: '#fef7f0',
-          100: '#fdeee0',
-          200: '#fbd9c1',
-          300: '#f8c19e',
-          400: '#f4a278',
-          500: '#f0805a',
-          600: '#ec5d3a',
-          700: '#e83e2f', // Vibrant coral red
-          800: '#d63031',
-          900: '#b71c1c',
-          950: '#8b0000',
+        bg: {
+          page: '#f7f8fb',
+          card: '#ffffff',
+          muted: '#f1f3f7',
         },
-        warm: {
-          50: '#fff7ed',
-          100: '#ffedd5',
-          200: '#fed7aa',
-          300: '#fdba74',
-          400: '#fb923c',
-          500: '#f97316', // Warm orange
-          600: '#ea580c',
-          700: '#c2410c',
-          800: '#9a3412',
-          900: '#7c2d12',
-          950: '#431407',
+        text: {
+          primary: '#0f1724',
+          secondary: '#6b7280',
+          inverse: '#ffffff',
         },
-        warmLight: {
-          50: '#fff7ed',
-          100: '#ffedd5',
-          200: '#fed7aa',
-          300: '#fdba74',
-          400: '#fb923c', // Light warm orange
-          500: '#f97316',
-          600: '#ea580c',
-          700: '#c2410c',
-          800: '#9a3412',
-          900: '#7c2d12',
-          950: '#431407',
-        }
-      }
+        border: {
+          DEFAULT: '#e6e9ef',
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+      },
+      fontSize: {
+        'h1': ['44px', { lineHeight: '1.2', fontWeight: '700' }],
+        'h2': ['32px', { lineHeight: '1.2', fontWeight: '700' }],
+        'h3': ['24px', { lineHeight: '1.2', fontWeight: '600' }],
+        'body': ['16px', { lineHeight: '1.6', fontWeight: '400' }],
+        'ui': ['13px', { lineHeight: '1.5', fontWeight: '500' }],
+      },
+      boxShadow: {
+        'card': '0 6px 20px rgba(16, 24, 40, 0.06)',
+        'card-hover': '0 12px 30px rgba(16, 24, 40, 0.12)',
+      },
+      borderRadius: {
+        'xl': '12px',
+      },
+      maxWidth: {
+        'container': '1200px',
+      },
+      spacing: {
+        '18': '4.5rem',
+        '28': '7rem',
+        '32': '8rem',
+      },
     },
   },
   plugins: [],

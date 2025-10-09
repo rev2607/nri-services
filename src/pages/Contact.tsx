@@ -71,10 +71,10 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen pt-20">
-      <section className="bg-gradient-to-br from-orange-600 to-orange-700 text-white py-20">
+      <section className="bg-gradient-to-br from-brand to-brand-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
-          <p className="text-xl text-orange-100 max-w-3xl mx-auto">
+          <p className="text-xl text-brand-100 max-w-3xl mx-auto">
             We're here to help. Reach out and let's discuss how we can serve you.
           </p>
         </div>
@@ -114,7 +114,7 @@ export default function Contact() {
                           name="name"
                           value={formData.name}
                           onChange={handleChange}
-                          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent transition-colors ${
+                          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand focus:border-transparent transition-colors ${
                             errors.name ? 'border-red-500' : 'border-gray-300'
                           }`}
                           placeholder="John Doe"
@@ -134,7 +134,7 @@ export default function Contact() {
                           name="email"
                           value={formData.email}
                           onChange={handleChange}
-                          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent transition-colors ${
+                          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand focus:border-transparent transition-colors ${
                             errors.email ? 'border-red-500' : 'border-gray-300'
                           }`}
                           placeholder="john@example.com"
@@ -156,7 +156,7 @@ export default function Contact() {
                           name="phone"
                           value={formData.phone}
                           onChange={handleChange}
-                          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent transition-colors ${
+                          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand focus:border-transparent transition-colors ${
                             errors.phone ? 'border-red-500' : 'border-gray-300'
                           }`}
                           placeholder="+1 234 567 8900"
@@ -176,7 +176,7 @@ export default function Contact() {
                           name="country"
                           value={formData.country}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent transition-colors"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand focus:border-transparent transition-colors"
                           placeholder="United States"
                         />
                       </div>
@@ -191,7 +191,7 @@ export default function Contact() {
                         name="service"
                         value={formData.service}
                         onChange={handleChange}
-                        className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent transition-colors ${
+                        className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand focus:border-transparent transition-colors ${
                           errors.service ? 'border-red-500' : 'border-gray-300'
                         }`}
                       >
@@ -218,7 +218,7 @@ export default function Contact() {
                         value={formData.message}
                         onChange={handleChange}
                         rows={5}
-                        className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent transition-colors resize-none ${
+                        className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand focus:border-transparent transition-colors resize-none ${
                           errors.message ? 'border-red-500' : 'border-gray-300'
                         }`}
                         placeholder="Tell us about your requirements..."
@@ -230,7 +230,7 @@ export default function Contact() {
 
                     <button
                       type="submit"
-                      className="w-full md:w-auto px-8 py-4 bg-gradient-to-r from-orange-600 to-orange-700 text-white font-semibold rounded-lg hover:from-orange-700 hover:to-orange-800 transition-all shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
+                      className="w-full md:w-auto px-8 py-4 bg-gradient-to-r from-brand to-brand-700 text-white font-semibold rounded-lg hover:from-brand-700 hover:to-brand-800 transition-all shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
                     >
                       <span>Send Message</span>
                       <Send className="w-5 h-5" />
@@ -241,28 +241,28 @@ export default function Contact() {
             </div>
 
             <div className="space-y-6">
-              <div className="bg-gradient-to-br from-orange-600 to-orange-700 text-white rounded-xl p-8 shadow-lg">
+              <div className="bg-gradient-to-br from-brand to-brand-700 text-white rounded-xl p-8 shadow-lg">
                 <h3 className="text-xl font-bold mb-6">Contact Information</h3>
                 <div className="space-y-4">
                   <a
                     href="tel:+919876543210"
-                    className="flex items-start space-x-3 hover:text-orange-100 transition-colors"
+                    className="flex items-start space-x-3 hover:text-brand-100 transition-colors"
                   >
                     <Phone className="w-5 h-5 flex-shrink-0 mt-1" />
                     <div>
                       <div className="font-semibold">Phone</div>
-                      <div className="text-orange-100">+91 98765 43210</div>
+                      <div className="text-brand-100">+91 98765 43210</div>
                     </div>
                   </a>
 
                   <a
                     href="mailto:support@nriservices.com"
-                    className="flex items-start space-x-3 hover:text-orange-100 transition-colors"
+                    className="flex items-start space-x-3 hover:text-brand-100 transition-colors"
                   >
                     <Mail className="w-5 h-5 flex-shrink-0 mt-1" />
                     <div>
                       <div className="font-semibold">Email</div>
-                      <div className="text-orange-100">support@nriservices.com</div>
+                      <div className="text-brand-100">support@nriservices.com</div>
                     </div>
                   </a>
 
@@ -270,7 +270,7 @@ export default function Contact() {
                     <MapPin className="w-5 h-5 flex-shrink-0 mt-1" />
                     <div>
                       <div className="font-semibold">Office</div>
-                      <div className="text-orange-100">
+                      <div className="text-brand-100">
                         123 Business Park, Sector 18<br />
                         Gurugram, Haryana 122015<br />
                         India

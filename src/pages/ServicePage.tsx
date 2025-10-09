@@ -31,7 +31,7 @@ export default function ServicePage({ slug, onNavigate }: ServicePageProps) {
           <h1 className="text-2xl font-bold text-gray-900 mb-4">Service Not Found</h1>
           <button
             onClick={() => onNavigate('home')}
-            className="text-orange-600 hover:text-orange-700 font-semibold"
+            className="text-brand hover:text-brand-700 font-semibold"
           >
             Return to Home
           </button>
@@ -57,7 +57,7 @@ export default function ServicePage({ slug, onNavigate }: ServicePageProps) {
 
   return (
     <div className="min-h-screen pt-20">
-      <section className="bg-gradient-to-br from-orange-600 to-orange-700 text-white py-20">
+      <section className="bg-gradient-to-br from-brand to-brand-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center mb-6">
             <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center">
@@ -83,7 +83,7 @@ export default function ServicePage({ slug, onNavigate }: ServicePageProps) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {service.features.map((feature, index) => (
               <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="w-5 h-5 text-orange-600 flex-shrink-0 mt-1" />
+                <CheckCircle className="w-5 h-5 text-brand flex-shrink-0 mt-1" />
                 <span className="text-gray-700">{feature}</span>
               </div>
             ))}
@@ -100,7 +100,7 @@ export default function ServicePage({ slug, onNavigate }: ServicePageProps) {
                 onClick={() => setCurrency('INR')}
                 className={`px-6 py-2 rounded-md font-semibold transition-colors ${
                   currency === 'INR'
-                    ? 'bg-orange-600 text-white'
+                    ? 'bg-brand text-white'
                     : 'text-gray-600 hover:text-gray-900'
                 }`}
               >
@@ -110,7 +110,7 @@ export default function ServicePage({ slug, onNavigate }: ServicePageProps) {
                 onClick={() => setCurrency('USD')}
                 className={`px-6 py-2 rounded-md font-semibold transition-colors ${
                   currency === 'USD'
-                    ? 'bg-orange-600 text-white'
+                    ? 'bg-brand text-white'
                     : 'text-gray-600 hover:text-gray-900'
                 }`}
               >
@@ -125,17 +125,17 @@ export default function ServicePage({ slug, onNavigate }: ServicePageProps) {
                 key={index}
                 className={`bg-white rounded-xl p-8 ${
                   index === 1
-                    ? 'border-2 border-orange-600 shadow-xl scale-105'
+                    ? 'border-2 border-brand shadow-xl scale-105'
                     : 'border border-gray-200 shadow-md'
                 }`}
               >
                 {index === 1 && (
-                  <div className="inline-block px-3 py-1 bg-orange-600 text-white text-sm font-semibold rounded-full mb-4">
+                  <div className="inline-block px-3 py-1 bg-brand text-white text-sm font-semibold rounded-full mb-4">
                     Most Popular
                   </div>
                 )}
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{plan.title}</h3>
-                <div className="text-3xl font-bold text-orange-600 mb-6">
+                <div className="text-3xl font-bold text-brand mb-6">
                   {currency === 'INR' ? plan.inr : plan.usd}
                 </div>
                 <ul className="space-y-3 mb-8">
@@ -150,7 +150,7 @@ export default function ServicePage({ slug, onNavigate }: ServicePageProps) {
                   onClick={() => onNavigate('contact')}
                   className={`w-full py-3 rounded-lg font-semibold transition-colors ${
                     index === 1
-                      ? 'bg-orange-600 text-white hover:bg-orange-700'
+                      ? 'bg-brand text-white hover:bg-brand-700'
                       : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                   }`}
                 >
@@ -239,7 +239,7 @@ export default function ServicePage({ slug, onNavigate }: ServicePageProps) {
                         key={index}
                         onClick={() => setCurrentTestimonial(index)}
                         className={`w-2 h-2 rounded-full transition-colors ${
-                          index === currentTestimonial ? 'bg-orange-600' : 'bg-gray-300'
+                          index === currentTestimonial ? 'bg-brand' : 'bg-gray-300'
                         }`}
                       />
                     ))}
@@ -257,7 +257,7 @@ export default function ServicePage({ slug, onNavigate }: ServicePageProps) {
         </section>
       )}
 
-      <section className="py-16 bg-gradient-to-br from-orange-600 to-orange-700 text-white">
+      <section className="py-16 bg-gradient-to-br from-brand to-brand-700 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Get Started?
@@ -267,7 +267,7 @@ export default function ServicePage({ slug, onNavigate }: ServicePageProps) {
           </p>
           <button
             onClick={() => onNavigate('contact')}
-            className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-orange-600 text-lg font-semibold rounded-lg hover:bg-orange-50 transition-colors shadow-lg"
+            className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-brand text-lg font-semibold rounded-lg hover:bg-brand-50 transition-colors shadow-lg"
           >
             <span>Book Free Consultation</span>
             <ArrowRight className="w-5 h-5" />
