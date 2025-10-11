@@ -11,7 +11,6 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [servicesTimeout, setServicesTimeout] = useState<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,14 +19,6 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  useEffect(() => {
-    return () => {
-      if (servicesTimeout) {
-        clearTimeout(servicesTimeout);
-      }
-    };
-  }, [servicesTimeout]);
 
   return (
     <header
@@ -39,15 +30,14 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
         <div className="flex justify-between items-center h-16 md:h-20">
           <button
             onClick={() => onNavigate('home')}
-            className="flex items-center space-x-3 group"
+            className="flex items-center space-x-2 group"
           >
-            <img 
-              src="/assets/logo.png" 
-              alt="NRI Care Logo" 
-              className="h-32 w-auto group-hover:scale-105 transition-transform duration-200"
-            />
+            <div className="w-10 h-10 bg-gradient-to-br from-orange-600 to-orange-700 rounded-lg flex items-center justify-center text-white font-bold text-lg shadow-md group-hover:shadow-lg transition-shadow">
+              NR
+            </div>
             <div className="hidden sm:block">
-              <div className="text-sm text-gray-600">Services from India</div>
+              <div className="text-lg font-bold text-gray-900">NRI Services</div>
+              <div className="text-xs text-gray-600">From India, With Care</div>
             </div>
           </button>
 
@@ -65,19 +55,8 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
 
             <div className="relative">
               <button
-                onMouseEnter={() => {
-                  if (servicesTimeout) {
-                    clearTimeout(servicesTimeout);
-                    setServicesTimeout(null);
-                  }
-                  setIsServicesOpen(true);
-                }}
-                onMouseLeave={() => {
-                  const timeout = setTimeout(() => {
-                    setIsServicesOpen(false);
-                  }, 200);
-                  setServicesTimeout(timeout);
-                }}
+                onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
                 className="flex items-center space-x-1 text-sm font-medium text-gray-700 hover:text-orange-600 transition-colors"
               >
                 <span>Services</span>
@@ -86,19 +65,8 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
 
               {isServicesOpen && (
                 <div
-                  onMouseEnter={() => {
-                    if (servicesTimeout) {
-                      clearTimeout(servicesTimeout);
-                      setServicesTimeout(null);
-                    }
-                    setIsServicesOpen(true);
-                  }}
-                  onMouseLeave={() => {
-                    const timeout = setTimeout(() => {
-                      setIsServicesOpen(false);
-                    }, 200);
-                    setServicesTimeout(timeout);
-                  }}
+                  onMouseEnter={() => setIsServicesOpen(true)}
+                  onMouseLeave={() => setIsServicesOpen(false)}
                   className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2 border border-gray-100"
                 >
                   {services.map((service) => (
