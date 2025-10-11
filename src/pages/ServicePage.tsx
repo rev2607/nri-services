@@ -56,8 +56,8 @@ export default function ServicePage({ slug, onNavigate }: ServicePageProps) {
   };
 
   return (
-    <div className="min-h-screen pt-20">
-      <section className="bg-gradient-to-br from-orange-600 to-orange-700 text-white py-20">
+    <div className="min-h-screen">
+      <section className="bg-gradient-to-br from-orange-600 to-orange-700 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center mb-6">
             <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center">

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Search, Mic, Home, Calculator, Landmark, Heart, Stethoscope, GraduationCap, CheckCircle, ArrowRight, Sparkles } from 'lucide-react';
 import { services } from '../data/services';
 import { testimonials } from '../data/testimonials';
+import ImageCarousel from '../components/ImageCarousel';
 
 interface HomeProps {
   onNavigate: (page: string) => void;
@@ -19,62 +20,97 @@ const iconMap: Record<string, any> = {
 export default function HomePage({ onNavigate }: HomeProps) {
   const [searchQuery, setSearchQuery] = useState('');
 
+  // Carousel images
+  const carouselImages = [
+    '/assets/overview.png',
+    '/assets/tax.png',
+    '/assets/banking.png',
+    '/assets/assignment.png',
+    '/assets/healthcare.png',
+    '/assets/property.png'
+  ];
+
   return (
     <div className="min-h-screen">
-      <section className="relative bg-gradient-to-br from-orange-600 via-orange-700 to-orange-800 pt-20">
+      <section className="relative bg-gradient-to-br from-orange-600 via-orange-700 to-orange-800 pt-16">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-40"></div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
-              Trust, Care, Excellence
-            </h1>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left side - Keep exactly as is */}
+            <div className="max-w-3xl">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
+                Trust, Care, Excellence
+              </h1>
 
-            <div className="mb-8">
-              <div className="bg-white rounded-xl shadow-2xl p-2 flex items-center">
-                <Search className="w-6 h-6 text-gray-400 ml-3" />
-                <input
-                  type="text"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder='Search for "Property Management" or any service...'
-                  className="flex-1 px-4 py-3 text-gray-900 placeholder-gray-500 focus:outline-none text-lg"
+              <div className="mb-8">
+                <div className="bg-white rounded-xl shadow-2xl p-2 flex items-center">
+                  <Search className="w-6 h-6 text-gray-400 ml-3" />
+                  <input
+                    type="text"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    placeholder='Search for "Property Management" or any service...'
+                    className="flex-1 px-4 py-3 text-gray-900 placeholder-gray-500 focus:outline-none text-lg"
+                  />
+                  <button className="p-3 hover:bg-gray-100 rounded-lg transition-colors">
+                    <Mic className="w-6 h-6 text-gray-400" />
+                  </button>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+                {services.map((service) => {
+                  const Icon = iconMap[service.icon];
+                  return (
+                    <button
+                      key={service.id}
+                      onClick={() => onNavigate(`service-${service.slug}`)}
+                      className="group bg-white hover:bg-orange-50 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 text-left"
+                    >
+                      <div className="flex items-center space-x-3 mb-2">
+                        <div className="w-10 h-10 bg-gradient-to-br from-orange-600 to-orange-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                          <Icon className="w-5 h-5 text-white" />
+                        </div>
+                      </div>
+                      <div className="text-sm font-bold text-gray-900 group-hover:text-orange-600 transition-colors">
+                        {service.title}
+                      </div>
+                    </button>
+                  );
+                })}
+              </div>
+
+              <button
+                onClick={() => onNavigate('contact')}
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-yellow-500 to-yellow-600 text-white text-lg font-bold rounded-xl hover:from-yellow-600 hover:to-yellow-700 transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5"
+              >
+                <span>Book a Consultation</span>
+                <ArrowRight className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Right side - Image Carousel */}
+            <div className="hidden lg:block">
+              <div className="h-[600px] w-full">
+                <ImageCarousel 
+                  images={carouselImages}
+                  autoPlayInterval={3000}
+                  className="h-full w-full"
                 />
-                <button className="p-3 hover:bg-gray-100 rounded-lg transition-colors">
-                  <Mic className="w-6 h-6 text-gray-400" />
-                </button>
               </div>
             </div>
+          </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
-              {services.map((service) => {
-                const Icon = iconMap[service.icon];
-                return (
-                  <button
-                    key={service.id}
-                    onClick={() => onNavigate(`service-${service.slug}`)}
-                    className="group bg-white hover:bg-orange-50 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 text-left"
-                  >
-                    <div className="flex items-center space-x-3 mb-2">
-                      <div className="w-10 h-10 bg-gradient-to-br from-orange-600 to-orange-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <Icon className="w-5 h-5 text-white" />
-                      </div>
-                    </div>
-                    <div className="text-sm font-bold text-gray-900 group-hover:text-orange-600 transition-colors">
-                      {service.title}
-                    </div>
-                  </button>
-                );
-              })}
+          {/* Mobile carousel - shows below content on smaller screens */}
+          <div className="lg:hidden mt-12">
+            <div className="h-[400px] w-full max-w-md mx-auto">
+              <ImageCarousel 
+                images={carouselImages}
+                autoPlayInterval={3000}
+                className="h-full w-full"
+              />
             </div>
-
-            <button
-              onClick={() => onNavigate('contact')}
-              className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-yellow-500 to-yellow-600 text-white text-lg font-bold rounded-xl hover:from-yellow-600 hover:to-yellow-700 transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5"
-            >
-              <span>Book a Consultation</span>
-              <ArrowRight className="w-5 h-5" />
-            </button>
           </div>
         </div>
       </section>

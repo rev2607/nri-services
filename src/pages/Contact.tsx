@@ -70,8 +70,8 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen pt-20">
-      <section className="bg-gradient-to-br from-orange-600 to-orange-700 text-white py-20">
+    <div className="min-h-screen">
+      <section className="bg-gradient-to-br from-orange-600 to-orange-700 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
           <p className="text-xl text-orange-100 max-w-3xl mx-auto">
